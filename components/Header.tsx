@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Search, Notifications, NoteAlt } from "@mui/icons-material";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="w-full min-h-[90px] flex justify-between items-center sticky">
       <div>
-        <a href="/">
+        <Link href="/">
           <div>
             <Image
               src="/logo.png"
@@ -14,24 +15,24 @@ const Header = () => {
               alt="A logo of the website written Kawala Blogs"
             />
           </div>
-        </a>
+        </Link>
       </div>
       <nav className="flex">
         <ul className="flex gap-6">
           <li>
-            <a href="/search" aria-label="search blogs">
+            <Link href="/search" aria-label="search blogs">
               <Search className="text-gray-500" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/notifications" aria-label="notification">
+            <Link href="/notifications" aria-label="notification">
               <Notifications className="text-gray-500" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/write" aria-label="write blog">
+            <Link href="/write" aria-label="write blog">
               <NoteAlt className="text-gray-500" />
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
