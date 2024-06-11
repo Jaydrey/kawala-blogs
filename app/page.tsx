@@ -9,7 +9,12 @@ const Home = () => {
       {allBlogs &&
         allBlogs.map((blog, blogIndex) => {
           return (
-            <div key={blogIndex}>
+            <div
+              key={blogIndex}
+              title={blog.title}
+              aria-label="blog card"
+              role="button"
+            >
               <BlogCard
                 key={blogIndex}
                 author={blog.author}
