@@ -31,9 +31,9 @@ const UserCard = ({
               <span>{user.fullName}</span>
             </p>
           ) : notification ? (
-            <p className="flex flex-wrap">
+            <p className="flex flex-wrap gap-1">
               <span> {notification.user?.fullName} </span>
-              <span className="text-gray-600">{notification.userMessage}</span>
+              <span className="text-gray-600">{ notification.userMessage}</span>
             </p>
           ) : (
             <></>
