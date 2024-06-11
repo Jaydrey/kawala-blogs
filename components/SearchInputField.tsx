@@ -2,7 +2,7 @@
 import { Search } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 
-const SearchInputField = () => {
+const SearchInputField = ({ searchTerm }: { searchTerm: string | string[] | undefined}) => {
   const router = useRouter();
 
   const handleSearchTermChange = (
@@ -27,6 +27,7 @@ const SearchInputField = () => {
         role="search"
         placeholder="Search all blogs ..."
         onChange={handleSearchTermChange}
+        value={searchTerm ?? ""}
       />
     </div>
   );
