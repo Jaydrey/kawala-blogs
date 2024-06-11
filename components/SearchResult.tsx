@@ -35,7 +35,7 @@ const SearchResult = ({ searchTerm }: { searchTerm: string | string[] }) => {
         {filteredBlogs.length > 0 ? (
           filteredBlogs.map((blog, blogIndex) => {
             return (
-              <>
+              <div key={blogIndex}>
                 <BlogCard
                   key={blogIndex}
                   title={blog.title}
@@ -47,7 +47,7 @@ const SearchResult = ({ searchTerm }: { searchTerm: string | string[] }) => {
                   isPublished={blog.isPublished}
                 />
                 <hr />
-              </>
+              </div>
             );
           })
         ) : (
