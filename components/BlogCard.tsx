@@ -3,7 +3,7 @@ import { ChatBubbleOutlineOutlined, FavoriteBorder } from "@mui/icons-material";
 
 const BlogCard = (blog: Blog) => {
   return (
-    <div className="w-full min-h-[20vh] flex flex-col justify-center py-4">
+    <div className="w-full min-h-[20vh] flex flex-col justify-center py-6">
       <div className="flex flex-col gap-3">
         <div className="flex">
           {/* image */}
