@@ -41,6 +41,17 @@ export const blogs: Blog[] = [
     isUserSaved: false,
     isPublished: true,
   },
+  {
+    title: "What Happened to ThoughtWorks",
+    shortDescription:
+      "Why has a leading software technical consultancy firm, once renowned for its innovation and positiv...",
+    publishedDate: "May 6",
+    totalComments: 18,
+    totalLikes: 1113,
+    author: author,
+    isUserSaved: false,
+    isPublished: true,
+  },
 ];
 
 
