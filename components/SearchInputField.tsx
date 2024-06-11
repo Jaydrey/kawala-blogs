@@ -27,7 +27,7 @@ const SearchInputField = ({ searchTerm }: { searchTerm: string | string[] | unde
         role="search"
         placeholder="Search all blogs ..."
         onChange={handleSearchTermChange}
-        value={searchTerm ?? ""}
+        // value={searchTerm ?? ""}
       />
     </div>
   );
