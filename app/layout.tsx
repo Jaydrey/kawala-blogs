@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kawala Blogs",
-  description: "This is the blog website that has the latest works and blogs of Norbert Kawala",
+  description:
+    "This is the blog website that has the latest works and blogs of Norbert Kawala",
 };
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} w-[90%] mx-auto`}>
         <Header />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
