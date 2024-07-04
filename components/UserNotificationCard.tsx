@@ -7,7 +7,7 @@ const UserNotificationCard = ({
   notification: Notifications;
 }) => {
   return (
-    <div>
+    <div role="button">
         <UserCard notification={notification} />
     </div>
   );
