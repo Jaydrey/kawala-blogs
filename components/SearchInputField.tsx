@@ -2,16 +2,27 @@
 import { Search } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 
-const SearchInputField = ({ searchTerm }: { searchTerm: string | string[] | undefined}) => {
+const SearchInputField = ({
+  searchTerm,
+  home = false,
+}: {
+  searchTerm?: string | string[] | undefined;
+  home?: boolean;
+}) => {
   const router = useRouter();
 
   const handleSearchTermChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    router.replace(`?term=${event.target.value}`, {
+    let urlParams = new URLSearchParams({
+      term: event.target.value,
+    });
+    router.replace(`?${urlParams}`, {
       scroll: false,
     });
   };
+
+ 
   return (
     <div className="w-full flex">
       <div className="py-2 px-3 flex items-center border-l border-y rounded-l-md">
@@ -26,7 +37,7 @@ const SearchInputField = ({ searchTerm }: { searchTerm: string | string[] | unde
         aria-label="search blogs field"
         role="search"
         placeholder="Search all blogs ..."
-        onChange={handleSearchTermChange}
+        onChange={!home ? handleSearchTermChange : () => {}}
         // value={searchTerm ?? ""}
       />
     </div>
