@@ -12,7 +12,7 @@ const SearchTermDiv = ({
     <li key={termIndex} className="w-full py-4">
       <div className="flex justify-between">
         <div role="button">{term.searchTerm && <p>{term.searchTerm}</p>}</div>
-        <div role="button" aria-label={`remove ${term} search term`}>
+        <div role="button" aria-label={`remove ${term.searchTerm} search term`}>
           <Close />
         </div>
       </div>

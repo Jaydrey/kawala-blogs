@@ -7,11 +7,13 @@ const SearchPage = ({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
-  const searchTerm = searchParams.term;
+  const searchTerm = searchParams.term || "";
 
   return (
     <main className="w-full md:w-[80%] md:mx-auto flex flex-col gap-2">
-      <SearchInputField searchTerm={searchTerm} />
+      <div className="md:hidden">
+        <SearchInputField searchTerm={searchTerm} />
+      </div>
       {searchTerm === "" || searchTerm === undefined ? (
         <RecentSearch />
       ) : (
